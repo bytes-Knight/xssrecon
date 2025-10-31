@@ -24,7 +24,7 @@ Where `urls.txt` contains a list of URLs to be tested, such as:
 
 ```
 http://example.com/search?query=test
-http://example.com/user/profile?name={payload}
+http://example.com/user/{payload}
 ```
 
 ## ⚙️ Command-Line Flags
