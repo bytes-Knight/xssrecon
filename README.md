@@ -7,7 +7,7 @@
 To install `xssrecon`, you need to have Go installed on your system. You can install `xssrecon` with the following command:
 
 ```bash
-go install -v github.com/bytes-Knight/xssrecon@latest
+go install -v github.com/bytes-Knight/xssrecon/cmd/xssrecon@latest
 ```
 
 ## 💡 Usage
@@ -33,9 +33,12 @@ http://example.com/user/{payload}
 
 | Flag              | Description                                                              | Default                                                                       |
 |-------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| `-H`, `--user-agent`  | Custom User-Agent header for HTTP requests.                              | `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36` |
+| `-H`, `--user-agent`  | Custom User-Agent header for HTTP requests.                              | `Mozilla/5.0 ...` |
 | `-t`, `--timeout`       | Timeout for HTTP requests in seconds.                                    | `15`                                                                          |
 | `-s`, `--skipspecialchar` | Only check for the presence of the test string in the response.          | `false`                                                                       |
+| `-c`, `--concurrency` | Number of concurrent workers.                                            | `10`                                                                          |
+| `-p`, `--proxy`       | Proxy URL (e.g., http://127.0.0.1:8080).                                 | `""`                                                                          |
+| `--verify-ssl`    | Verify SSL certificates.                                                 | `false`                                                                       |
 | `--no-color`      | Do not use colored output.                                               | `false`                                                                       |
 | `--silent`        | Suppress the banner and other non-essential output.                     | `false`                                                                       |
 | `--version`       | Print the version of the tool and exit.                                  | `false`                                                                       |
